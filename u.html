@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Splide CSS / JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+<body class="bg-pink-400 text-red-400 min-h-screen flex flex-col justify-between">
+
+    <div>
+        <header class="bg-purple-400 text-white text-center py-4">
+            <h1 class="text-2xl font-bold underline">MAKO NO PORTFOLIO</h1>
+            <p class="mt-2 text-white text-center">MAKO HA BEAUTIFUL</p> 
+        </header>
+
+        <main class="w-full px-4 py-12 space-y-16 flex-grow">
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center underline">Introduction</h2>
+                <p class="text-lg font-bold mb-4 leading-relaxed text-white text-center">KONNICHIWA!! WATASHI HA MAKO CHAN DESU.</p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">POWERFUL SKILL</h2>
+                <ul class="flex flex-wrap gap-2 justify-center">
+                    <li class="transition-all duration-200 hover:scale-105 bg-purple-200 text-gray-400 px-3 py-1 mb-2 rounded-full text-sm">HTML</li>
+                    <li class="transition-all duration-300 hover:scale-105 bg-purple-200 text-gray-400 px-3 py-1 mb-2 rounded-full text-sm">Tailwind CSS</li>
+                    <li class="transition-all duration-400 hover:scale-105 bg-purple-200 text-gray-400 px-3 py-1 mb-2 rounded-full text-sm">JavaScript</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">SAKUHIN</h2>
+                <div class="splide max-w-xl mx-auto px-4" aria-label="作品スライダー">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide flex justify-center">
+                                <img src="./makomako.png" alt="作品1" class="w-64 rounded-lg object-cover">
+                            </li>
+                            <li class="splide__slide flex justify-center">
+                                <img src="./mako2.jpg" alt="作品2" class="w-64 rounded-lg object-cover">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-16">
+        <p>2026 Mako</p>
+    </footer>
+
+    <!-- Splide初期化スクリプト -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.splide', {
+                type: 'loop',
+                perPage: 1,
+                autoplay: true,
+            }).mount();
+        });
+    </script>
+</body>
+</html>
